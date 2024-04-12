@@ -41,6 +41,7 @@ namespace ex11_events
             {
                 notifier.DoSomething(i); // 내장된 클래스의 어떠한 메서드 호출
             }
+            // notifier.SomethingHappened(30); // 이벤트 핸들러는 함수가 아니기 때문에 호출불가
             #region "익명 메서드"
             /*
             MyDelegate callback; // 대리자
