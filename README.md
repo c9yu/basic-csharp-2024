@@ -182,10 +182,71 @@
     - JAVA에서는 'Getter 메서드/Setter 메서드'를 사용, C#은 프로퍼티를 사용
 
 ## 2일차 (2024-04-12)
+- Tip
+    - C#에서 빌드 시 프로세스 액세스 오류 해결
+        - 빌드하고자 하는 프로그램이 백그라운드 상에 동작중이기 때문에 발생한다.
+        - Ctrl + Shift + ESC(작업관리자)에서 해당 프로세스 작업 끝내기 후 재빌드
+
 - 컬렉션 (배열, 리스트, 인덱서)
+    - 배열의 다양한 초기화 방법
+    
+    ```cs
+    // '초기화 방법 1'
+    int[] array = new int[5]; 
+
+    // '초기화 방법 2' : 초기화 선언하면서 값을 바로 지정
+    int[] score = new int[3] { 70, 80, 90 };
+            
+    // '초기화 방법 3' : 배열의 크기를 생략
+    string[] names = new string[] { "hello", "world", "C#!" }
+            
+    // '초기화 방법 4' : 전부 다 생략
+    float[] points = { 3.14f, 5.5f, 4.4f, 10.8f };
+    ```
+    - 모든 배열은 System.Array 클래스를 상속한 하위 클래스
+    - 기본적인 배열의 사용법, Python의 리스트와 동일
+    - 배열 분할 - C# 8.0부터 파이썬의 배열 슬라이스를 도입 (python의 range)
+    - 컬렉션
+        - ArrayList
+        - Stack
+        - Queue
+        - Hashtable(== Dictionary)
+    - foreach를 사용할 수 있는 객체로 만들기 - yield
+
 - 일반화 (Generic) 프로그래밍
+    - 파이썬 : 변수에 제약사항이 없음
+    - 타입의 제약을 해소하고자 만든 기능이 일반화 기능이다. ArrayList
+    - 일반화를 하는 이유
+        - 타입이 지정된 프로그래밍 언어의 경우 각 타입마다 함수를 새로 만들어줘야하는 불편함이 생기는데 이를 해결하기 위함이다.
+    - 일반화 컬렉션
+        - List <T>
+        - Stack <T>, Queue <T>
+        - Dictionary <TKey, TValue>
+
 - 예외처리
+    - 소스코드 상 문법적 오류 -> 오류(Error)
+    - 실행 중 생기는 오류 - 예외(Exception)
+
+    ```cs
+    try {
+        // 예외가 발생할 것 같은 소스코드
+    } catch(Exception ex){
+        /* 모든 예외 클래스의 조상은 Exception(ex. IndexOutOfRangeException)
+           어떤 예외 클래스를 사용할 지 모르겠다면, 무조건 Exception 클래스를 사용하면 된다. */
+        Console.WriteLine(ex.Message);
+    }finally{
+        // 예외 발생 유무에 상관없이 항상 실행
+    }
+    ```
 - 대리자와 이벤트
+    - 메서드 호출 시 매개변수 전달
+    - 대리자 호출 시 함수(메서드) 자체를 전달
+    - 대리자(EventHandler)는 일종의 버튼을 만드는 것이라고 생각하면 된다.
+        - 버튼은 그저 버튼의 역할만 수행하고, 버튼을 눌렀을 때 어떤 일이 발생할지는 우리가 별도로 작성해준다.
+
+- TIP, C# 주석 중 영역을 지정 할 수 있는 주석
+    - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
+
 - 람다식
 - 애트리뷰트
 - ...
