@@ -241,18 +241,31 @@
 - 대리자와 이벤트
     - 메서드 호출 시 매개변수 전달
     - 대리자 호출 시 함수(메서드) 자체를 전달
+    - event : 컴퓨터 내에서 발생하는 객체의 사건들
+
+    - delegate -> event
+    - Winform 개발 -> 이벤트 기반 (Event driven) 프로그래밍
+
     - 대리자(EventHandler)는 일종의 버튼을 만드는 것이라고 생각하면 된다.
-        - 버튼은 그저 버튼의 역할만 수행하고, 버튼을 눌렀을 때 어떤 일이 발생할지는 우리가 별도로 작성해준다.
+        - 버튼은 그저 버튼의 역할만 수행하고, 버튼을 눌렀을 때 어떤 일이 발생할지는 별도로 작성해준다.
+        - EventHandler과 MyHandler의 관계는? -> MyHandler가 버튼(EventHandler)가 눌렸을때 실행되는 구문이다.
 
 - TIP, C# 주석 중 영역을 지정 할 수 있는 주석
     - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
 
-- 람다식
-- 애트리뷰트
-- ...
+    ![region 주석](https://raw.githubusercontent.com/c9yu/basic-csharp-2024/main/images/csharp002.png)
 
 ## 3일차 (2024-04-13)
+- 람다식
+- LINQ
+- 애트리뷰트
+- 파이썬 실행
+- Winform UI 개발 + 파일, 스레드
+- 가비지 컬렉션
+- 네트워크 프로그래밍
 
 ## 4일차 (2024-04-14)
+- WPF
+- 예제 프로젝트
 
 ## 5일차 (2024-04-15)
