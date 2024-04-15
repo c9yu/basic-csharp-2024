@@ -249,6 +249,7 @@
     - 대리자(EventHandler)는 일종의 버튼을 만드는 것이라고 생각하면 된다.
         - 버튼은 그저 버튼의 역할만 수행하고, 버튼을 눌렀을 때 어떤 일이 발생할지는 별도로 작성해준다.
         - EventHandler과 MyHandler의 관계는? -> MyHandler가 버튼(EventHandler)가 눌렸을때 실행되는 구문이다.
+        - 버튼의 이름과 역할은 무조건 일치한다는 보장은 없다.
 
 - TIP, C# 주석 중 영역을 지정 할 수 있는 주석
     - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
