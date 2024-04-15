@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex12_lambdas", "ex12_lambdas\ex12_lambdas.csproj", "{96384904-8845-421C-9FD5-D34279407C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ex12_lambdas", "ex12_lambdas\ex12_lambdas.csproj", "{96384904-8845-421C-9FD5-D34279407C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex13_linqs", "ex13_LinQ\ex13_linqs.csproj", "{876F7B78-3071-468A-9813-E563ECEFD94C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ex13_linqs", "ex13_LinQ\ex13_linqs.csproj", "{876F7B78-3071-468A-9813-E563ECEFD94C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ex14_attributes", "ex14_attributes\ex14_attributes.csproj", "{B3B84481-1F5D-4098-AC70-384FA648E49B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ex15_pythons", "ex15_pythons\ex15_pythons.csproj", "{92661C42-CB4C-4386-B8B2-B410E969F4B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex16_winforms", "ex16_winforms\ex16_winforms.csproj", "{49BB905E-273B-44D5-9FD5-3507B79ACB0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex17_winApp", "ex17_winApp\ex17_winApp.csproj", "{96D4D7AA-3003-486E-95C3-B609848D2B2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{876F7B78-3071-468A-9813-E563ECEFD94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{876F7B78-3071-468A-9813-E563ECEFD94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876F7B78-3071-468A-9813-E563ECEFD94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B84481-1F5D-4098-AC70-384FA648E49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B84481-1F5D-4098-AC70-384FA648E49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B84481-1F5D-4098-AC70-384FA648E49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B84481-1F5D-4098-AC70-384FA648E49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92661C42-CB4C-4386-B8B2-B410E969F4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92661C42-CB4C-4386-B8B2-B410E969F4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92661C42-CB4C-4386-B8B2-B410E969F4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92661C42-CB4C-4386-B8B2-B410E969F4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BB905E-273B-44D5-9FD5-3507B79ACB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BB905E-273B-44D5-9FD5-3507B79ACB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BB905E-273B-44D5-9FD5-3507B79ACB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BB905E-273B-44D5-9FD5-3507B79ACB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D4D7AA-3003-486E-95C3-B609848D2B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D4D7AA-3003-486E-95C3-B609848D2B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D4D7AA-3003-486E-95C3-B609848D2B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D4D7AA-3003-486E-95C3-B609848D2B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
