@@ -306,6 +306,17 @@
     - 예제 프로젝트
 
 ## 4일차 (2024-04-14)
+- 윈폼 UI 개발
+    - Winforms로 윈폼 개발 학습
+    - 윈폼 UI 개발시 컨트롤 박스에서 꺼내온 뒤 '더블 클릭' 은 절대 하지마라!
+    - 복사 할 때는 Ctrl + 드래그
+    - 컨트롤 Prefix
+        - ComboBox : Cbo~
+        - CheckBox : Chk~
+        - RadioButton : Rdo~
+        - TextBox : Txt~
+        - Button : Btn~
+
 - WPF
 - 예제 프로젝트
 
