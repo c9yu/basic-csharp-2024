@@ -256,7 +256,7 @@
 
     ![region 주석](https://raw.githubusercontent.com/c9yu/basic-csharp-2024/main/images/csharp002.png)
 
-## 3일차 (2024-04-13)
+## 3일차 (2024-04-15)
 - 람다식
     - 익명 메서드를 만드는 방식 중 하나 - delegate, lambda expression
     - 무명 함수(Anonymous Function) : 람다식으로 만드는 익명 메소드
@@ -305,19 +305,44 @@
 
     - 예제 프로젝트
 
-## 4일차 (2024-04-14)
+## 4일차 (2024-04-16)
 - 윈폼 UI 개발
     - Winforms로 윈폼 개발 학습
     - 윈폼 UI 개발시 컨트롤 박스에서 꺼내온 뒤 '더블 클릭' 은 절대 하지마라!
     - 복사 할 때는 Ctrl + 드래그
-    - 컨트롤 Prefix
+    - 컨트롤 Prefix (거의 영문 3글자)
         - ComboBox : Cbo~
         - CheckBox : Chk~
         - RadioButton : Rdo~
         - TextBox : Txt~
         - Button : Btn~
+        - TrackBar : Trb~
+        - ProgressBar : Prg~
+        - TreeView : Trv~
+        - ListView : Lsv~
+        - PictureBox : Pic~
+        - ~Dialog : Dlg~
+
+    - 여러가지 스타일을 접목시키고 싶을때는 : |
+    - closing이 closed보다 먼저
+    - Tree를 확장 하는것 : Expand
+
+    - Visual Studio 윈폼 개발
+        - 전체 저장 : Ctrl + Shift + S
+        - 세밀한 크기 조정은 그랩 때문에 힘들 수 있는데 'Alt' 키를 누른 상태로 조절하면 된다.
 
 - WPF
 - 예제 프로젝트
 
-## 5일차 (2024-04-15)
+## 5일차 (2024-04-17)
+- 윈폼 UI 개발(계속)
+    - 스레드 추가
+    - 파일 입출력 추가
+    - 비동기 작업 앱
+    - 윈도우 탐색기 앱
+    - 도서관리 앱 with SQL Server
+    - ModernUI 앱
+    - 국가교통정보센터 CCTV 뷰 앱
+    - IoT Dummy 앱 with SQL Server
+
+## 6일차 (2024-04-17)
