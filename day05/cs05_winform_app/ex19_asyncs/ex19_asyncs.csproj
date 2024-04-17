@@ -13,4 +13,12 @@
     <Content Include="irregular.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\sources\basic-csharp-2024\day05\cs05_winform_app\ex19_asyncs\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\sources\basic-csharp-2024\day05\cs05_winform_app\ex19_asyncs\.editorconfig" />
+  </ItemGroup>
+
 </Project>
