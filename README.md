@@ -323,11 +323,10 @@
         - PictureBox : Pic~
         - ~Dialog : Dlg~
 
-    - 여러가지 스타일을 접목시키고 싶을때는 : |
-    - closing이 closed보다 먼저
-    - Tree를 확장 하는것 : Expand
-
     - Visual Studio 윈폼 개발
+        - 여러가지 스타일을 접목시키고 싶을때는 : |
+        - closing이 closed보다 먼저
+        - Tree를 확장 하는것 : Expand
         - 전체 저장 : Ctrl + Shift + S
         - 세밀한 크기 조정은 그랩 때문에 힘들 수 있는데 'Alt' 키를 누른 상태로 조절하면 된다.
 
@@ -336,6 +335,12 @@
 
 ## 5일차 (2024-04-17)
 - 윈폼 UI 개발(계속)
+    - Visual Studio 윈폼 개발
+        - 그룹박스의 경우 소스코드 내에서 다룰 때는 이름을 따로 붙여주는 것이 좋다.
+        - 디자이너에서 다룰 때는 별도로 이름을 붙일 필요는 없다.
+        - Dock : 위치 조정할 때 사용
+        - TextBox도 Multiline을 False -> True로 변경하면 여러 줄 입력 가능
+
     - 스레드 추가
     - 파일 입출력 추가
     - 비동기 작업 앱
