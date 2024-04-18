@@ -1,6 +1,5 @@
-// date : 2024-04-18
-
 using System.Diagnostics;
+using System.Linq.Expressions;
 
 namespace MyExplorer
 {
@@ -17,7 +16,7 @@ namespace MyExplorer
 
         }
 
-        // 가장 기본. 폼로드 이벤트핸들러(가장 먼저 실행됨)
+        // 가장 기본. 폼로드 이벤트핸들러 (가장 먼저 실행됨)
         private void FrmMain_Load(object sender, EventArgs e)
         {
             TreeNode root = TrvFolder.Nodes.Add("내 컴퓨터");
@@ -26,11 +25,12 @@ namespace MyExplorer
             foreach (var drive in drives)
             {
                 TreeNode node = root.Nodes.Add(drive);
-                node.Nodes.Add("..."); // 최초의 상태로 Setup
+                node.Nodes.Add("...");  // 최초의 상태로 Setup
             }
+            LsvFiles.View = View.LargeIcon;
         }
 
-        // 트리노드 선택 후 이벤트핸들러
+        // 트리노드 선택후 이벤트핸들러
         private void TrvFolder_AfterSelect(object sender, TreeViewEventArgs e)
         {
             // 폴더에서 노드 선택하면 리스트뷰에 파일표시
@@ -38,42 +38,41 @@ namespace MyExplorer
             if (e.Node == null) return;
 
             string path = current.FullPath.Replace("\\\\", "\\");
-            TxtPath.Text = path.Substring(path.IndexOf("\\") + 1); // '내 컴퓨터\' 제거
+            TxtPath.Text = path.Substring(path.IndexOf("\\") + 1);  // '내 컴퓨터\' 제거
 
             try
             {
-
-                LsvFile.Items.Clear(); // 다른 폴더에 있던 이전파일 정보 삭제
-                                       // 현재폴더의 하위폴더 정보 디스플레이
+                LsvFiles.Items.Clear(); // 다른 폴더에 있던 이전 파일 정보 삭제
+                                        // 현재폴더의 하위폴더 정보 디스플레이
                 string[] directories = Directory.GetDirectories(TxtPath.Text);
                 foreach (var directory in directories)
                 {
                     DirectoryInfo info = new DirectoryInfo(directory);
-                    ListViewItem item = new ListViewItem(new string[] { info.Name, info.LastWriteTime.ToString(), "파일 폴더", string.Empty }); // string.Empty는 문자열 빈 값
-                    item.ImageIndex = 1;
-                    LsvFile.Items.Add(item);
+                    // 리스트뷰 컬럼 이름, 수정일자, 유형, 크기 순으로 리스트뷰 아이템 생성
+                    // 문자열 빈값 : "", string.Empty
+                    ListViewItem item = new ListViewItem(new String[] { info.Name, info.LastWriteTime.ToString(), "파일폴더", string.Empty });
+                    item.ImageIndex = 1; // 리스트뷰의 폴더 이미지 인덱스
+                    LsvFiles.Items.Add(item);
                 }
-
                 // 파일 리스트업
-                string[] files = Directory.GetFiles(TxtPath.Text); // 현재 폴더내의 파일 정보
+                string[] files = Directory.GetFiles(TxtPath.Text);  // 현재 폴더내의 파일정보
                 foreach (var file in files)
                 {
                     FileInfo info = new FileInfo(file);
-                    ListViewItem item = new ListViewItem((new string[] { info.Name, info.LastWriteTime.ToString(), info.Extension, info.Length.ToString() }));
-                    item.ImageIndex = GetImageIndex(info.Extension); // 리스트 뷰의 폴더 이미지 인덱스
-                    LsvFile.Items.Add(item);
+                    ListViewItem item = new ListViewItem(new string[] { info.Name, info.LastWriteTime.ToString(), info.Extension, info.Length.ToString() });
+                    item.ImageIndex = GetImageIndex(info.Extension);    // 확장자의 종류에 따라 이미지번호가 변경
+                    LsvFiles.Items.Add(item);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private int GetImageIndex(string extension)
         {
-            // 3 : 실행파일, 4 : 일반파일, 5 : txt파일
+            // 3: 실행파일, 4:일반파일, 5:txt파일
             var index = -1;
             switch (extension.ToLower())
             {
@@ -98,27 +97,54 @@ namespace MyExplorer
             // 폼이 로드된 후 최초의 상태라면
             if (current.Nodes.Count == 1 && current.Nodes[0].Text.Equals("..."))
             {
-                current.Nodes.Clear(); // ...을 삭제
-                // FullPath, 내 컴퓨터\C:\ 에서 C:\만 남김
-                String path = current.FullPath.Substring(current.FullPath.IndexOf("\\") + 1);
+                current.Nodes.Clear();  // ...을 삭제
+                // FullPath, 내 컴퓨터\C:\ 에서 C:\ 만 남김
+                String path = current.FullPath.Substring(current.FullPath.IndexOf('\\') + 1);
 
                 try
                 {
                     string[] directories = Directory.GetDirectories(path);
                     foreach (var directory in directories)
                     {
-                        Debug.WriteLine(directory); // 디버그에서만 출력됨
+                        Debug.WriteLine(directory); // 디버그시만 출력됨
                         TreeNode newNode = current.Nodes.Add(directory.Substring(directory.LastIndexOf("\\") + 1));
-                        newNode.ImageIndex = 1;   // 미선택시 폴더 이미지
+                        newNode.ImageIndex = 1;  // 미선택시 폴더 이미지
                         newNode.SelectedImageIndex = 2; // 선택시 폴더 이미지
                         newNode.Nodes.Add("...");
                     }
                 }
-
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error); // 개발자한텐 예외, 사용자에겐 에러
+                    MessageBox.Show(ex.Message, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
                 }
+            }
+        }
+
+        private void LsvFiles_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                // 컨텍스트 메뉴는 오른쪽 버튼에서만 동작
+                Cmsfiles.Show(LsvFiles, e.Location); // 마우스 위치에서 쇼를 실행
+            }
+        }
+
+        private void SpcExplorer_Panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                // 컨텍스트 메뉴는 오른쪽 버튼에서만 동작
+                Cmsfiles.Show(LsvFiles, e.Location); // 마우스 위치에서 쇼를 실행
+            }
+        }
+
+        private void LsvFiles_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                // 컨텍스트 메뉴는 오른쪽 버튼에서만 동작
+                Cmsfiles.Show(LsvFiles,e.Location);
             }
         }
     }

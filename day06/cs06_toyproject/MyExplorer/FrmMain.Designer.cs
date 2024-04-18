@@ -34,79 +34,88 @@ namespace MyExplorer
             BtnOpen = new Button();
             TxtPath = new TextBox();
             label1 = new Label();
-            splitContainer1 = new SplitContainer();
+            SpcExplorer = new SplitContainer();
             TrvFolder = new TreeView();
             ImgSmallIcon = new ImageList(components);
-            LsvFile = new ListView();
+            LsvFiles = new ListView();
             ClhTitle = new ColumnHeader();
             ClhModifiedDate = new ColumnHeader();
             ClhType = new ColumnHeader();
             ClhSize = new ColumnHeader();
             ImgLargeIcon = new ImageList(components);
+            Cmsfiles = new ContextMenuStrip(components);
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            toolStripMenuItem4 = new ToolStripMenuItem();
+            toolStripMenuItem5 = new ToolStripMenuItem();
+            toolStripMenuItem6 = new ToolStripMenuItem();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SpcExplorer).BeginInit();
+            SpcExplorer.Panel1.SuspendLayout();
+            SpcExplorer.Panel2.SuspendLayout();
+            SpcExplorer.SuspendLayout();
+            Cmsfiles.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(BtnOpen);
             panel1.Controls.Add(TxtPath);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 41);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(809, 38);
+            panel1.TabIndex = 1;
             // 
             // BtnOpen
             // 
             BtnOpen.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnOpen.Location = new Point(713, 9);
+            BtnOpen.BackColor = SystemColors.Control;
+            BtnOpen.Location = new Point(736, 6);
             BtnOpen.Name = "BtnOpen";
-            BtnOpen.Size = new Size(75, 23);
-            BtnOpen.TabIndex = 2;
+            BtnOpen.Size = new Size(61, 23);
+            BtnOpen.TabIndex = 0;
             BtnOpen.Text = "열기";
-            BtnOpen.UseVisualStyleBackColor = true;
+            BtnOpen.UseVisualStyleBackColor = false;
             BtnOpen.Click += BtnOpen_Click;
             // 
             // TxtPath
             // 
             TxtPath.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtPath.Location = new Point(64, 10);
+            TxtPath.Location = new Point(49, 6);
             TxtPath.Name = "TxtPath";
             TxtPath.ReadOnly = true;
-            TxtPath.Size = new Size(643, 23);
+            TxtPath.Size = new Size(681, 23);
             TxtPath.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(19, 13);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(31, 15);
             label1.TabIndex = 0;
             label1.Text = "경로";
             // 
-            // splitContainer1
+            // SpcExplorer
             // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 41);
-            splitContainer1.Name = "splitContainer1";
+            SpcExplorer.Dock = DockStyle.Fill;
+            SpcExplorer.Location = new Point(0, 38);
+            SpcExplorer.Name = "SpcExplorer";
             // 
-            // splitContainer1.Panel1
+            // SpcExplorer.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(TrvFolder);
+            SpcExplorer.Panel1.Controls.Add(TrvFolder);
             // 
-            // splitContainer1.Panel2
+            // SpcExplorer.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(LsvFile);
-            splitContainer1.Size = new Size(800, 409);
-            splitContainer1.SplitterDistance = 266;
-            splitContainer1.TabIndex = 1;
+            SpcExplorer.Panel2.Controls.Add(LsvFiles);
+            SpcExplorer.Size = new Size(809, 401);
+            SpcExplorer.SplitterDistance = 269;
+            SpcExplorer.TabIndex = 2;
             // 
             // TrvFolder
             // 
@@ -117,7 +126,7 @@ namespace MyExplorer
             TrvFolder.Location = new Point(0, 0);
             TrvFolder.Name = "TrvFolder";
             TrvFolder.SelectedImageIndex = 0;
-            TrvFolder.Size = new Size(266, 409);
+            TrvFolder.Size = new Size(269, 401);
             TrvFolder.TabIndex = 0;
             TrvFolder.BeforeExpand += TrvFolder_BeforeExpand;
             TrvFolder.AfterSelect += TrvFolder_AfterSelect;
@@ -134,19 +143,20 @@ namespace MyExplorer
             ImgSmallIcon.Images.SetKeyName(4, "file-normal.png");
             ImgSmallIcon.Images.SetKeyName(5, "txt.png");
             // 
-            // LsvFile
+            // LsvFiles
             // 
-            LsvFile.BorderStyle = BorderStyle.None;
-            LsvFile.Columns.AddRange(new ColumnHeader[] { ClhTitle, ClhModifiedDate, ClhType, ClhSize });
-            LsvFile.Dock = DockStyle.Fill;
-            LsvFile.LargeImageList = ImgLargeIcon;
-            LsvFile.Location = new Point(0, 0);
-            LsvFile.Name = "LsvFile";
-            LsvFile.Size = new Size(530, 409);
-            LsvFile.SmallImageList = ImgSmallIcon;
-            LsvFile.TabIndex = 0;
-            LsvFile.UseCompatibleStateImageBehavior = false;
-            LsvFile.View = View.Details;
+            LsvFiles.BorderStyle = BorderStyle.None;
+            LsvFiles.Columns.AddRange(new ColumnHeader[] { ClhTitle, ClhModifiedDate, ClhType, ClhSize });
+            LsvFiles.Dock = DockStyle.Fill;
+            LsvFiles.LargeImageList = ImgLargeIcon;
+            LsvFiles.Location = new Point(0, 0);
+            LsvFiles.Name = "LsvFiles";
+            LsvFiles.Size = new Size(536, 401);
+            LsvFiles.SmallImageList = ImgSmallIcon;
+            LsvFiles.TabIndex = 0;
+            LsvFiles.UseCompatibleStateImageBehavior = false;
+            LsvFiles.View = View.Details;
+            LsvFiles.MouseDown += LsvFiles_MouseDown;
             // 
             // ClhTitle
             // 
@@ -155,7 +165,7 @@ namespace MyExplorer
             // 
             // ClhModifiedDate
             // 
-            ClhModifiedDate.Text = "수정한 날짜";
+            ClhModifiedDate.Text = "수정일자";
             ClhModifiedDate.Width = 100;
             // 
             // ClhType
@@ -166,6 +176,7 @@ namespace MyExplorer
             // ClhSize
             // 
             ClhSize.Text = "크기";
+            ClhSize.TextAlign = HorizontalAlignment.Right;
             ClhSize.Width = 100;
             // 
             // ImgLargeIcon
@@ -180,12 +191,55 @@ namespace MyExplorer
             ImgLargeIcon.Images.SetKeyName(4, "file-normal.png");
             ImgLargeIcon.Images.SetKeyName(5, "txt.png");
             // 
+            // Cmsfiles
+            // 
+            Cmsfiles.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1 });
+            Cmsfiles.Name = "contextMenuStrip1";
+            Cmsfiles.Size = new Size(99, 26);
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3, toolStripMenuItem4, toolStripMenuItem5, toolStripMenuItem6 });
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(98, 22);
+            toolStripMenuItem1.Text = "보기";
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(138, 22);
+            toolStripMenuItem2.Text = "큰 아이콘";
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(138, 22);
+            toolStripMenuItem3.Text = "작은 아이콘";
+            // 
+            // toolStripMenuItem4
+            // 
+            toolStripMenuItem4.Name = "toolStripMenuItem4";
+            toolStripMenuItem4.Size = new Size(138, 22);
+            toolStripMenuItem4.Text = "목록";
+            // 
+            // toolStripMenuItem5
+            // 
+            toolStripMenuItem5.Name = "toolStripMenuItem5";
+            toolStripMenuItem5.Size = new Size(138, 22);
+            toolStripMenuItem5.Text = "자세히";
+            // 
+            // toolStripMenuItem6
+            // 
+            toolStripMenuItem6.Name = "toolStripMenuItem6";
+            toolStripMenuItem6.Size = new Size(138, 22);
+            toolStripMenuItem6.Text = "타입";
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(splitContainer1);
+            ClientSize = new Size(809, 439);
+            Controls.Add(SpcExplorer);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmMain";
@@ -194,10 +248,11 @@ namespace MyExplorer
             Load += FrmMain_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
+            SpcExplorer.Panel1.ResumeLayout(false);
+            SpcExplorer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)SpcExplorer).EndInit();
+            SpcExplorer.ResumeLayout(false);
+            Cmsfiles.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -207,14 +262,21 @@ namespace MyExplorer
         private Button BtnOpen;
         private TextBox TxtPath;
         private Label label1;
-        private SplitContainer splitContainer1;
+        private SplitContainer SpcExplorer;
         private TreeView TrvFolder;
-        private ListView LsvFile;
+        private ListView LsvFiles;
         private ColumnHeader ClhTitle;
+        private ColumnHeader ClhType;
         private ColumnHeader ClhModifiedDate;
         private ColumnHeader ClhSize;
-        private ColumnHeader ClhType;
         private ImageList ImgSmallIcon;
         private ImageList ImgLargeIcon;
+        private ContextMenuStrip Cmsfiles;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem toolStripMenuItem4;
+        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem toolStripMenuItem6;
     }
 }
