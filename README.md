@@ -404,10 +404,22 @@
     - 국가교통정보센터 CCTV 뷰 앱
     - IoT Dummy 앱 with SQL Server
 
-## 개인 포트폴리오
+## 개인 토이 프로젝트
 - 심플 메모장앱
     - 기능
     - 특징
     - 배운점
 
 ## 6일차 (2024-04-17)
+ - 예제 프로젝트
+    - 윈도우 탐색기 앱
+        - MyExplorer 프로젝트 생성
+        - 아이콘 검색, png 2 icon
+
+        - Dock : 위치에 맞춰서 크기를 조정해 준다.
+        - Anchor : 화면 크기를 조정 할 때 어느 부분을 늘려줄지 정해준다.
+
+    - ModernUI 앱
+    - 도서관리 앱 with SQL Server (Base)
+    - 국가교통정보센터 CCTV 뷰 앱 (OpenAPI, NuGet, Network)
+    - IoT Dummy 앱 with SQL Server (Iot, DB)
