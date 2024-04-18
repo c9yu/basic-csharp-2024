@@ -405,7 +405,7 @@
         - 아이콘 검색, png 2 icon, 구글링 웹사이트
         - 트리뷰, 리스트뷰 기능 추가
 
-        ![중간결과]()
+        ![중간결과](https://raw.githubusercontent.com/c9yu/basic-csharp-2024/main/images/csharp005.png)
 
         - Dock : 위치에 맞춰서 크기를 조정해 준다.
         - Anchor : 화면 크기를 조정 할 때 어느 부분을 늘려줄지 정해준다.
