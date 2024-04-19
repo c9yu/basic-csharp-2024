@@ -418,15 +418,34 @@
           https://github.com/c9yu/basic-csharp-2024/assets/158007438/bd0c181d-26f6-40c4-8d59-952fb43d750c
 
 
+    - README 동영상 업로드
+        - 깃허브 안에서 리드미 수정창을 키고, 원하는 영상을 드래그하여 집어넣은 뒤 커밋.
+        - 이후 깃허브 데스크탑에서 패치 오리진 해준 뒤, 다시한번 업로드
 
     - 도서관리 앱 with SQL Server ModernUI 앱 (NuGet 패키지)
+    ```cs
+    // 값형식 변수에 null값을 넣을 수 있도록 만들어 준 기능 Nullable. 변수명 뒤에 ?만 추가할 것
+
+    int? a = null;
+    double? b = null;
+    float? c = null;
+    ```
+        - 로그인 패스워드 암호화 미구현
+
+    - 메뉴 스트립
+        - 이름을 지정할 때 ex. '파일(&F)' 처럼 &를 넣어줘야 Alt + F 단축키를 사용할 수 있게 된다.
+
+    - SQL과 연동 방법
+        - 보기에서 서버 탐색기 선택하여 추가
 
 
 ## 8일차 (2024-04-19)
 - 토이 프로젝트
-    - 국가교통정보센터 CCTV 뷰 앱 (OpenAPI, NuGet, Network)
+    - 도서관리 앱 종료
     - IoT Dummy 앱 with SQL Server (Iot, DB)
 
+    - 국가교통정보센터 CCTV 뷰 앱 (OpenAPI, NuGet, Network)
+    
 ## 개인 토이 프로젝트
 - 심플 메모장앱
     - 기능
