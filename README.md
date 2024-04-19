@@ -413,8 +413,11 @@
 ## 7일차 (2024-04-18)
 - 토이 프로젝트
     - 윈도우 탐색기 앱 종료
-    - ModernUI 앱 (UI 디자인)
-    - 도서관리 앱 with SQL Server (Base)
+    - 도서관리 앱 with SQL Server ModernUI 앱 (NuGet 패키지)
+
+
+## 8일차 (2024-04-19)
+- 토이 프로젝트
     - 국가교통정보센터 CCTV 뷰 앱 (OpenAPI, NuGet, Network)
     - IoT Dummy 앱 with SQL Server (Iot, DB)
 

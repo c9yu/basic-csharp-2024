@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 
 namespace MyExplorer
@@ -144,7 +145,54 @@ namespace MyExplorer
             if (e.Button == MouseButtons.Right)
             {
                 // 컨텍스트 메뉴는 오른쪽 버튼에서만 동작
-                Cmsfiles.Show(LsvFiles,e.Location);
+                Cmsfiles.Show(LsvFiles, e.Location);
+            }
+        }
+
+        private void TsmMenuLargeIcon_Click(object sender, EventArgs e)
+        {
+            LsvFiles.View = View.LargeIcon;
+        }
+
+        private void TsmMenuSmallIcon_Click(object sender, EventArgs e)
+        {
+            LsvFiles.View = View.SmallIcon;
+        }
+
+        private void TsmMenuList_Click(object sender, EventArgs e)
+        {
+            LsvFiles.View = View.List;
+        }
+
+        private void TsmMenuDetails_Click(object sender, EventArgs e)
+        {
+            LsvFiles.View = View.Details;
+        }
+
+        private void TsmMenuTile_Click(object sender, EventArgs e)
+        {
+            LsvFiles.View = View.Tile;
+        }
+
+        // 리스트뷰 아이템 더블클릭 이벤트 핸들러. 실행파일 실행
+        private void LsvFiles_DoubleClick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                var extension = LsvFiles.SelectedItems[0].Text.Split(".")[1];
+                if (extension == "exe")
+                {
+                    // 실행파일이면
+                    // MessageBox.Show(LsvFiles.SelectedItems[0].Text); -> 디버깅용
+                    // 실행파일의 경로는 TxtPath
+                    var fullPath = TxtPath.Text + "\\" + LsvFiles.SelectedItems[0].Text;
+                    Process.Start(fullPath); // 외부 프로그램 실행
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
