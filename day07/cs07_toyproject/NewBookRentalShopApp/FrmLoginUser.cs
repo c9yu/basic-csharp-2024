@@ -25,7 +25,7 @@ namespace NewBookRentalShopApp
 
         private void FrmLoginUser_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
             {
                 conn.Open();
 
@@ -73,7 +73,7 @@ namespace NewBookRentalShopApp
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
+                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
                 {
                     conn.Open();
 
@@ -143,7 +143,7 @@ namespace NewBookRentalShopApp
             var asnwer = MetroMessageBox.Show(this, "정말 삭제하시겠습니까?", "삭제여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (asnwer == DialogResult.No) return;
 
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
             {
                 conn.Open();
                 var query = @"DELETE FROM usertbl WHERE useridx = @useridx";
@@ -171,7 +171,7 @@ namespace NewBookRentalShopApp
         // 데이터그리뷰에 데이터를 새로 부르기
         private void RefreshData()
         {
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
             {
                 conn.Open();
 

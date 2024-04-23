@@ -6,7 +6,7 @@ namespace NewBookRentalShopApp.Helper
     public class Common
     {
         // 정적으로 만드는 공통 연결문자열
-        public static string ConnSting = "Data Source = localhost;" +
+        public static string ConnString = "Data Source = localhost;" +
                                     "Initial Catalog = BookRentalShop2024;" +
                                     "Persist Security Info = True;" +
                                     "User ID = sa; Encrypt = False;Password=mssql_p@ss";
