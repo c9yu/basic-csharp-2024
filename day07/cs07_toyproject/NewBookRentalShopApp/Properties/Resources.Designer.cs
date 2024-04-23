@@ -63,9 +63,9 @@ namespace NewBookRentalShopApp.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap KakaoTalk_20240422_110811855 {
+        internal static System.Drawing.Bitmap User {
             get {
-                object obj = ResourceManager.GetObject("KakaoTalk_20240422_110811855", resourceCulture);
+                object obj = ResourceManager.GetObject("User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

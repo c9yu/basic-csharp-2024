@@ -61,8 +61,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(760, 370);
-            this.splitContainer1.SplitterDistance = 382;
+            this.splitContainer1.Size = new System.Drawing.Size(758, 370);
+            this.splitContainer1.SplitterDistance = 354;
             this.splitContainer1.TabIndex = 0;
             // 
             // DgvResult
@@ -72,7 +72,7 @@
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
             this.DgvResult.Name = "DgvResult";
             this.DgvResult.RowTemplate.Height = 23;
-            this.DgvResult.Size = new System.Drawing.Size(382, 370);
+            this.DgvResult.Size = new System.Drawing.Size(354, 370);
             this.DgvResult.TabIndex = 0;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
             // 
@@ -87,18 +87,17 @@
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(-7, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 370);
+            this.groupBox1.Size = new System.Drawing.Size(509, 370);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "사용자 입력 항목";
+            this.groupBox1.Text = "로그인 사용자 입력 항목";
             // 
             // BtnDel
             // 
-            this.BtnDel.Location = new System.Drawing.Point(253, 118);
+            this.BtnDel.Location = new System.Drawing.Point(321, 132);
             this.BtnDel.Name = "BtnDel";
             this.BtnDel.Size = new System.Drawing.Size(70, 35);
             this.BtnDel.TabIndex = 8;
@@ -108,7 +107,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(177, 118);
+            this.BtnSave.Location = new System.Drawing.Point(245, 132);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(70, 35);
             this.BtnSave.TabIndex = 7;
@@ -118,7 +117,7 @@
             // 
             // BtnNew
             // 
-            this.BtnNew.Location = new System.Drawing.Point(101, 118);
+            this.BtnNew.Location = new System.Drawing.Point(169, 132);
             this.BtnNew.Name = "BtnNew";
             this.BtnNew.Size = new System.Drawing.Size(70, 35);
             this.BtnNew.TabIndex = 6;
@@ -132,7 +131,7 @@
             // 
             // 
             this.TxtPassword.CustomButton.Image = null;
-            this.TxtPassword.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.TxtPassword.CustomButton.Location = new System.Drawing.Point(222, 1);
             this.TxtPassword.CustomButton.Name = "";
             this.TxtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -141,20 +140,20 @@
             this.TxtPassword.CustomButton.UseSelectable = true;
             this.TxtPassword.CustomButton.Visible = false;
             this.TxtPassword.Lines = new string[0];
-            this.TxtPassword.Location = new System.Drawing.Point(101, 85);
+            this.TxtPassword.Location = new System.Drawing.Point(125, 89);
             this.TxtPassword.MaxLength = 32767;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '●';
-            this.TxtPassword.PromptText = "패스워드 입력";
+            this.TxtPassword.PromptText = "비밀번호 입력";
             this.TxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtPassword.SelectedText = "";
             this.TxtPassword.SelectionLength = 0;
             this.TxtPassword.SelectionStart = 0;
             this.TxtPassword.ShortcutsEnabled = true;
-            this.TxtPassword.Size = new System.Drawing.Size(183, 23);
+            this.TxtPassword.Size = new System.Drawing.Size(244, 23);
             this.TxtPassword.TabIndex = 5;
             this.TxtPassword.UseSelectable = true;
-            this.TxtPassword.WaterMark = "패스워드 입력";
+            this.TxtPassword.WaterMark = "비밀번호 입력";
             this.TxtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -164,7 +163,7 @@
             // 
             // 
             this.TxtUserId.CustomButton.Image = null;
-            this.TxtUserId.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.TxtUserId.CustomButton.Location = new System.Drawing.Point(222, 1);
             this.TxtUserId.CustomButton.Name = "";
             this.TxtUserId.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtUserId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -173,7 +172,7 @@
             this.TxtUserId.CustomButton.UseSelectable = true;
             this.TxtUserId.CustomButton.Visible = false;
             this.TxtUserId.Lines = new string[0];
-            this.TxtUserId.Location = new System.Drawing.Point(101, 53);
+            this.TxtUserId.Location = new System.Drawing.Point(125, 60);
             this.TxtUserId.MaxLength = 32767;
             this.TxtUserId.Name = "TxtUserId";
             this.TxtUserId.PasswordChar = '\0';
@@ -183,7 +182,7 @@
             this.TxtUserId.SelectionLength = 0;
             this.TxtUserId.SelectionStart = 0;
             this.TxtUserId.ShortcutsEnabled = true;
-            this.TxtUserId.Size = new System.Drawing.Size(183, 23);
+            this.TxtUserId.Size = new System.Drawing.Size(244, 23);
             this.TxtUserId.TabIndex = 4;
             this.TxtUserId.UseSelectable = true;
             this.TxtUserId.WaterMark = "사용자 아이디 입력";
@@ -196,7 +195,7 @@
             // 
             // 
             this.TxtUserIdx.CustomButton.Image = null;
-            this.TxtUserIdx.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.TxtUserIdx.CustomButton.Location = new System.Drawing.Point(222, 1);
             this.TxtUserIdx.CustomButton.Name = "";
             this.TxtUserIdx.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtUserIdx.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -205,7 +204,7 @@
             this.TxtUserIdx.CustomButton.UseSelectable = true;
             this.TxtUserIdx.CustomButton.Visible = false;
             this.TxtUserIdx.Lines = new string[0];
-            this.TxtUserIdx.Location = new System.Drawing.Point(101, 20);
+            this.TxtUserIdx.Location = new System.Drawing.Point(125, 32);
             this.TxtUserIdx.MaxLength = 32767;
             this.TxtUserIdx.Name = "TxtUserIdx";
             this.TxtUserIdx.PasswordChar = '\0';
@@ -214,8 +213,8 @@
             this.TxtUserIdx.SelectedText = "";
             this.TxtUserIdx.SelectionLength = 0;
             this.TxtUserIdx.SelectionStart = 0;
-            this.TxtUserIdx.ShortcutsEnabled = false;
-            this.TxtUserIdx.Size = new System.Drawing.Size(183, 23);
+            this.TxtUserIdx.ShortcutsEnabled = true;
+            this.TxtUserIdx.Size = new System.Drawing.Size(244, 23);
             this.TxtUserIdx.TabIndex = 3;
             this.TxtUserIdx.UseSelectable = true;
             this.TxtUserIdx.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -224,38 +223,38 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(25, 86);
+            this.metroLabel3.Location = new System.Drawing.Point(56, 89);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(65, 19);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "패스워드";
+            this.metroLabel3.Text = "비밀번호";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 55);
+            this.metroLabel2.Location = new System.Drawing.Point(24, 60);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(97, 19);
             this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "사용자 ID";
+            this.metroLabel2.Text = "사용자 아이디";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(7, 24);
+            this.metroLabel1.Location = new System.Drawing.Point(38, 32);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(83, 19);
             this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "사용자 순번";
+            this.metroLabel1.Text = "사용자 번호";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmLoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(798, 450);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmLoginUser";
             this.Text = "로그인 사용자";

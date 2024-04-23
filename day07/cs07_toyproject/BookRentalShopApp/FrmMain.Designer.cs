@@ -46,16 +46,16 @@
             MnsBookRental.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
             MnsBookRental.Location = new Point(0, 0);
             MnsBookRental.Name = "MnsBookRental";
-            MnsBookRental.Size = new Size(800, 24);
+            MnsBookRental.Size = new Size(707, 24);
             MnsBookRental.TabIndex = 1;
             MnsBookRental.Text = "menuStrip1";
             // 
             // StsBookRental
             // 
             StsBookRental.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3 });
-            StsBookRental.Location = new Point(0, 428);
+            StsBookRental.Location = new Point(0, 409);
             StsBookRental.Name = "StsBookRental";
-            StsBookRental.Size = new Size(800, 22);
+            StsBookRental.Size = new Size(707, 22);
             StsBookRental.TabIndex = 2;
             StsBookRental.Text = "statusStrip1";
             // 
@@ -87,7 +87,7 @@
             // 
             toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             toolStripStatusLabel2.Size = new Size(40, 17);
-            toolStripStatusLabel2.Text = "Userid";
+            toolStripStatusLabel2.Text = "UserId";
             // 
             // toolStripStatusLabel3
             // 
@@ -99,7 +99,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(707, 431);
             Controls.Add(StsBookRental);
             Controls.Add(MnsBookRental);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -119,9 +119,9 @@
         #endregion
 
         private MenuStrip MnsBookRental;
+        private StatusStrip StsBookRental;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private StatusStrip StsBookRental;
         private ToolStripMenuItem toolStripMenuItem3;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripStatusLabel toolStripStatusLabel2;

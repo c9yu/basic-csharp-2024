@@ -15,6 +15,8 @@ namespace NewBookRentalShopApp
     {
         // 각 화면을 초기화
         FrmLoginUser frmLoginUser = null; // 객체를 메서드로 생성
+        FrmBookDivision frmBookDivision = null;
+        FrmBookInfo frmBookInfo = null;
 
         public FrmMain()
         {
@@ -38,6 +40,18 @@ namespace NewBookRentalShopApp
             frmLoginUser = ShowActiveForm(frmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
         }
 
+        // 책 장르관리 메뉴 클릭 이벤트핸들러
+        private void MnuBookDivision_Click(object sender, EventArgs e)
+        {
+            frmBookDivision = ShowActiveForm(frmBookDivision, typeof(FrmBookDivision)) as FrmBookDivision;
+        }
+
+        private void MnuBookInfo_Click(object sender, EventArgs e)
+        {
+            // 객체변수, 객체변수, 클래스, 클래스(밑에 순서대로)
+            frmBookInfo = ShowActiveForm(frmBookInfo, typeof(FrmBookInfo)) as FrmBookInfo;  // FrmBookInfo로 형 변환
+        }
+
         Form ShowActiveForm(Form form, Type type)
         {
             if (form == null) // 화면이 한번도 안열었으면
@@ -51,8 +65,8 @@ namespace NewBookRentalShopApp
             {
                 if (form.IsDisposed)  // 창이 한번 닫혔으면 쭉 진행
                 {
-                    form = Activator.CreateInstance(type) as Form;
-                    form.MdiParent = this;
+                    form = Activator.CreateInstance(type) as Form; 
+                    form.MdiParent = this; 
                     form.WindowState = FormWindowState.Normal;
                     form.Show();
                 }
@@ -62,8 +76,9 @@ namespace NewBookRentalShopApp
                 }
             }
 
-            return form;
+            return form;    
 
         }
+
     }
 }
