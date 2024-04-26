@@ -58,6 +58,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookRental.Designer.cs">
+      <DependentUpon>FrmBookRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMember.Designer.cs">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +107,29 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Common.cs" />
+    <Compile Include="PopBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopBook.Designer.cs">
+      <DependentUpon>PopBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopMember.Designer.cs">
+      <DependentUpon>PopMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookRental.resx">
+      <DependentUpon>FrmBookRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMember.resx">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBookInfo.resx">
       <DependentUpon>FrmBookInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,21 +145,27 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PopBook.resx">
+      <DependentUpon>PopBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopMember.resx">
+      <DependentUpon>PopMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -132,15 +177,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books.ico" />
-    <None Include="imgs\rental.ico" />
-    <None Include="imgs\member.ico" />
-    <None Include="imgs\login.ico" />
-    <None Include="imgs\division.ico" />
-    <None Include="imgs\book.ico" />
-    <None Include="imgs\rental.png" />
-    <None Include="imgs\member.png" />
-    <None Include="imgs\book.png" />
-    <None Include="imgs\division.png" />
+    <Content Include="img\book.ico" />
+    <Content Include="img\book.png" />
+    <Content Include="img\division.ico" />
+    <Content Include="img\division.png" />
+    <Content Include="img\login.ico" />
+    <Content Include="img\login.png" />
+    <Content Include="img\member.ico" />
+    <Content Include="img\member.png" />
+    <Content Include="img\rental.ico" />
+    <Content Include="img\rental.png" />
+    <None Include="Resources\search4.png" />
+    <None Include="Resources\search3.png" />
+    <None Include="Resources\search2.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\search.png" />
     <None Include="User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

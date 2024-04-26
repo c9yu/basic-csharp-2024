@@ -52,7 +52,7 @@ namespace NewBookRentalShopApp
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
                 {
                     conn.Open();
 
@@ -116,7 +116,7 @@ namespace NewBookRentalShopApp
             var asnwer = MetroMessageBox.Show(this, "정말 삭제하시겠습니까?", "삭제여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (asnwer == DialogResult.No) return;
 
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
                 var query = @"DELETE FROM divtbl WHERE Division = @Division";
@@ -144,7 +144,7 @@ namespace NewBookRentalShopApp
         // 데이터그리뷰에 데이터를 새로 부르기
         private void RefreshData()
         {
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
 

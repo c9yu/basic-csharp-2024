@@ -25,7 +25,7 @@ namespace NewBookRentalShopApp
 
         private void FrmLoginUser_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
 
@@ -58,22 +58,29 @@ namespace NewBookRentalShopApp
         private void BtnSave_Click(object sender, EventArgs e)
         {
             var md5Hash = MD5.Create(); // MD5 암호화용 객체 생성
+            var valid = true;
+            var errMsg = "";
 
             // 입력검증(Validation Check), 이름, 패스워드를 안넣으면
             if (string.IsNullOrEmpty(TxtUserId.Text))
             {
-                MessageBox.Show("사용자 아이디를 입력하세요.");
-                return;
+                errMsg += "사용자 아이디를 입력하세요.\n";
+                valid = false;
             }
             if (string.IsNullOrEmpty(TxtPassword.Text))
             {
-                MessageBox.Show("비밀번호를 입력하세요.");
+                errMsg += "패스워드를 입력하세요.";
+                valid = false;
+            }
+            if (valid == false)
+            {
+                MetroMessageBox.Show(this.Parent.Parent, errMsg, "입력오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+                using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
                 {
                     conn.Open();
 
@@ -143,7 +150,7 @@ namespace NewBookRentalShopApp
             var asnwer = MetroMessageBox.Show(this, "정말 삭제하시겠습니까?", "삭제여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (asnwer == DialogResult.No) return;
 
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
                 var query = @"DELETE FROM usertbl WHERE useridx = @useridx";
@@ -171,7 +178,7 @@ namespace NewBookRentalShopApp
         // 데이터그리뷰에 데이터를 새로 부르기
         private void RefreshData()
         {
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
 

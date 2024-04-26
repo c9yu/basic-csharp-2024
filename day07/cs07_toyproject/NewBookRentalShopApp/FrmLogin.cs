@@ -74,7 +74,7 @@ namespace NewBookRentalShopApp
              */
             // 연결문자열(ConnectionString)
             // Data Source = localhost; Initial Catalog = BookRentalShop2024; Persist Security Info = True; User ID = sa; Encrypt = False;Password=mssql_p@ss
-            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.ConnSting))
             {
                 conn.Open();
                 // @userId, @password 는 쿼리문이 아닌 쿼리문 외부에서 변수값을 안전하게 주입을 시켜줌
@@ -96,6 +96,7 @@ namespace NewBookRentalShopApp
                 {
                     chkUserId = reader["userId"] != null ? reader["userId"].ToString() : "-"; // 유저아이디가 null일 때 '-' 로 변경
                     chkPassword = reader["password"] != null ? reader["password"].ToString() : "-"; // 패스워드가 null일 때 '-' 로 변경
+                    Helper.Common.LoginId = chkUserId; // 로그인 된 아이디를 할당
 
                     return true;
                 }
