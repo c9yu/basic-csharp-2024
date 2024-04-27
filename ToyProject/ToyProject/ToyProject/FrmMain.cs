@@ -79,5 +79,50 @@ namespace ToyProject
                 Environment.Exit(0);
             }
         }
+        Form ShowActiveForm(Form form, Type type)
+        {
+            if (form == null) // 화면이 한번도 안열었으면
+            {
+                form = Activator.CreateInstance(type) as Form; // 타입은 클래스 타입
+                form.MdiParent = this; // 자식창의 부모는 FrmMain
+                form.WindowState = FormWindowState.Normal;
+                form.Show();
+            }
+            else
+            {
+                if (form.IsDisposed)  // 창이 한번 닫혔으면 쭉 진행
+                {
+                    form = Activator.CreateInstance(type) as Form;
+                    form.MdiParent = this;
+                    form.WindowState = FormWindowState.Normal;
+                    form.Show();
+                }
+                else // 창을 그냥 최소화, 열려있으면
+                {
+                    form.Activate(); // 화면에 열려있는 창을 활성화
+                }
+            }
+
+            return form;
+
+        }
+        public void AddToListbox(string value)
+        {
+            ListBox1.Items.Add(value);
+        }
+
+        public ListBox Listbox1
+        {
+            get { return ListBox1; }
+            set { ListBox1 = value; }
+        }
+
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            FrmOrder frmOrder = new FrmOrder(); // 새로운 FrmOrder 인스턴스 생성
+            frmOrder.Show();
+            frmOrder = ShowActiveForm(frmOrder, typeof(FrmOrder)) as FrmOrder;
+
+        }
     }
 }

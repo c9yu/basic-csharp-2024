@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            listBox1 = new ListBox();
+            ListBox1 = new ListBox();
             listBox2 = new ListBox();
             listBox3 = new ListBox();
             listBox4 = new ListBox();
@@ -47,14 +47,15 @@
             label6 = new Label();
             SuspendLayout();
             // 
-            // listBox1
+            // ListBox1
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 38);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(220, 139);
-            listBox1.TabIndex = 0;
+            ListBox1.FormattingEnabled = true;
+            ListBox1.ItemHeight = 15;
+            ListBox1.Location = new Point(12, 38);
+            ListBox1.Name = "ListBox1";
+            ListBox1.Size = new Size(220, 139);
+            ListBox1.TabIndex = 0;
+            ListBox1.Click += listBox1_Click;
             // 
             // listBox2
             // 
@@ -214,7 +215,7 @@
             Controls.Add(listBox5);
             Controls.Add(listBox2);
             Controls.Add(listBox4);
-            Controls.Add(listBox1);
+            Controls.Add(ListBox1);
             Name = "FrmMain";
             Text = "매장 계산대";
             FormClosing += FrmMain_FormClosing_1;
@@ -225,7 +226,7 @@
 
         #endregion
 
-        private ListBox listBox1;
+        private ListBox ListBox1;
         private ListBox listBox2;
         private ListBox listBox3;
         private ListBox listBox4;

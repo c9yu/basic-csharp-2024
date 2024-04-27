@@ -28,156 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            listView1 = new ListView();
-            button8 = new Button();
-            button9 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Dgv1 = new DataGridView();
+            BtnG = new Button();
+            BtnF = new Button();
+            BtnD = new Button();
+            BtnAdd = new Button();
+            BtnSub = new Button();
+            BtnDelete = new Button();
+            BtnBack = new Button();
+            Dgv2 = new DataGridView();
+            BtnPay = new Button();
+            ((System.ComponentModel.ISupportInitialize)Dgv1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Dgv2).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // Dgv1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(366, 56);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(378, 198);
-            dataGridView1.TabIndex = 0;
+            Dgv1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dgv1.Location = new Point(426, 56);
+            Dgv1.Name = "Dgv1";
+            Dgv1.ReadOnly = true;
+            Dgv1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            Dgv1.Size = new Size(318, 198);
+            Dgv1.TabIndex = 0;
             // 
-            // button1
+            // BtnG
             // 
-            button1.Location = new Point(366, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 38);
-            button1.TabIndex = 1;
-            button1.Text = "국밥";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            BtnG.Location = new Point(426, 12);
+            BtnG.Name = "BtnG";
+            BtnG.Size = new Size(75, 38);
+            BtnG.TabIndex = 1;
+            BtnG.Text = "국밥";
+            BtnG.UseVisualStyleBackColor = true;
+            BtnG.Click += button1_Click;
             // 
-            // button2
+            // BtnF
             // 
-            button2.Location = new Point(447, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 38);
-            button2.TabIndex = 1;
-            button2.Text = "음식";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            BtnF.Location = new Point(507, 12);
+            BtnF.Name = "BtnF";
+            BtnF.Size = new Size(75, 38);
+            BtnF.TabIndex = 1;
+            BtnF.Text = "음식";
+            BtnF.UseVisualStyleBackColor = true;
+            BtnF.Click += button2_Click;
             // 
-            // button3
+            // BtnD
             // 
-            button3.Location = new Point(528, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 38);
-            button3.TabIndex = 1;
-            button3.Text = "주류";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            BtnD.Location = new Point(588, 12);
+            BtnD.Name = "BtnD";
+            BtnD.Size = new Size(75, 38);
+            BtnD.TabIndex = 1;
+            BtnD.Text = "주류";
+            BtnD.UseVisualStyleBackColor = true;
+            BtnD.Click += button3_Click;
             // 
-            // button4
+            // BtnAdd
             // 
-            button4.Location = new Point(366, 260);
-            button4.Name = "button4";
-            button4.Size = new Size(90, 34);
-            button4.TabIndex = 2;
-            button4.Text = "주문";
-            button4.UseVisualStyleBackColor = true;
+            BtnAdd.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            BtnAdd.Location = new Point(507, 260);
+            BtnAdd.Name = "BtnAdd";
+            BtnAdd.Size = new Size(75, 34);
+            BtnAdd.TabIndex = 2;
+            BtnAdd.Text = "+";
+            BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
             // 
-            // button5
+            // BtnSub
             // 
-            button5.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            button5.Location = new Point(462, 260);
-            button5.Name = "button5";
-            button5.Size = new Size(90, 34);
-            button5.TabIndex = 2;
-            button5.Text = "+";
-            button5.UseVisualStyleBackColor = true;
+            BtnSub.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            BtnSub.Location = new Point(588, 260);
+            BtnSub.Name = "BtnSub";
+            BtnSub.Size = new Size(75, 34);
+            BtnSub.TabIndex = 2;
+            BtnSub.Text = "-";
+            BtnSub.UseVisualStyleBackColor = true;
+            BtnSub.Click += BtnSub_Click;
             // 
-            // button6
+            // BtnDelete
             // 
-            button6.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            button6.Location = new Point(558, 260);
-            button6.Name = "button6";
-            button6.Size = new Size(90, 34);
-            button6.TabIndex = 2;
-            button6.Text = "-";
-            button6.UseVisualStyleBackColor = true;
+            BtnDelete.Location = new Point(669, 260);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(75, 34);
+            BtnDelete.TabIndex = 2;
+            BtnDelete.Text = "삭제";
+            BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
             // 
-            // button7
+            // BtnBack
             // 
-            button7.Location = new Point(654, 260);
-            button7.Name = "button7";
-            button7.Size = new Size(90, 34);
-            button7.TabIndex = 2;
-            button7.Text = "취소";
-            button7.UseVisualStyleBackColor = true;
+            BtnBack.Location = new Point(12, 12);
+            BtnBack.Name = "BtnBack";
+            BtnBack.Size = new Size(75, 38);
+            BtnBack.TabIndex = 1;
+            BtnBack.Text = "뒤로가기";
+            BtnBack.UseVisualStyleBackColor = true;
+            BtnBack.Click += BtnBack_Click;
             // 
-            // listView1
+            // Dgv2
             // 
-            listView1.Location = new Point(12, 56);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(348, 236);
-            listView1.TabIndex = 3;
-            listView1.UseCompatibleStateImageBehavior = false;
+            Dgv2.BackgroundColor = SystemColors.ControlLight;
+            Dgv2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dgv2.Location = new Point(12, 56);
+            Dgv2.Name = "Dgv2";
+            Dgv2.ReadOnly = true;
+            Dgv2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            Dgv2.Size = new Size(408, 236);
+            Dgv2.TabIndex = 3;
             // 
-            // button8
+            // BtnPay
             // 
-            button8.Location = new Point(12, 12);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 38);
-            button8.TabIndex = 1;
-            button8.Text = "뒤로가기";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Location = new Point(669, 12);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 38);
-            button9.TabIndex = 1;
-            button9.Text = "결제";
-            button9.UseVisualStyleBackColor = true;
+            BtnPay.Location = new Point(426, 260);
+            BtnPay.Name = "BtnPay";
+            BtnPay.Size = new Size(75, 34);
+            BtnPay.TabIndex = 1;
+            BtnPay.Text = "결제";
+            BtnPay.UseVisualStyleBackColor = true;
+            BtnPay.Click += BtnPay_Click;
             // 
             // FrmOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(758, 304);
-            Controls.Add(listView1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button9);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button8);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(Dgv2);
+            Controls.Add(BtnDelete);
+            Controls.Add(BtnSub);
+            Controls.Add(BtnAdd);
+            Controls.Add(BtnPay);
+            Controls.Add(BtnD);
+            Controls.Add(BtnF);
+            Controls.Add(BtnBack);
+            Controls.Add(BtnG);
+            Controls.Add(Dgv1);
             Name = "FrmOrder";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FrmOrder_Load;
+            ((System.ComponentModel.ISupportInitialize)Dgv1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Dgv2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private ListView listView1;
-        private Button button8;
-        private Button button9;
+        private DataGridView Dgv1;
+        private Button BtnG;
+        private Button BtnF;
+        private Button BtnD;
+        private Button BtnAdd;
+        private Button BtnSub;
+        private Button BtnDelete;
+        private Button BtnBack;
+        private DataGridView Dgv2;
+        private Button BtnPay;
     }
 }
