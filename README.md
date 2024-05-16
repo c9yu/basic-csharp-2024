@@ -511,5 +511,8 @@
         - ListBox와 Data Grid View를 연결하여 상호간에 영향을 주게끔 할 수 있었다.
         - DB연동 방법
             -
+
     
+    https://github.com/c9yu/basic-csharp-2024/assets/158007438/ec7c4d76-1fe2-4ba2-8d1e-92b3df86355c
+
 
