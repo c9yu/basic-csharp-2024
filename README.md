@@ -509,8 +509,6 @@
         - DB의 데이터를 연동시키게 될 경우 로그인, 메뉴출력 등 DB를 사용하지 않고 프로그램을 작성하는것보다 
         유리한 점이 많다는 것을 알 수 있었다.
         - ListBox와 Data Grid View를 연결하여 상호간에 영향을 주게끔 할 수 있었다.
-        - DB연동 방법
-            -
 
     
     https://github.com/c9yu/basic-csharp-2024/assets/158007438/ec7c4d76-1fe2-4ba2-8d1e-92b3df86355c
