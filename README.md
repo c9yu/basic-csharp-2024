@@ -462,7 +462,7 @@
         - 대출 관리 
         - 프로그램 소개
 
-        ![도서대여프로그램](https://raw.githubusercontent.com/c9yu/basic-csharp-2024/main/images/csharp005.png)
+        ![도서대여프로그램](https://raw.githubusercontent.com/c9yu/basic-csharp-2024/main/images/csharp006.png)
 
 
 ## 나머지
